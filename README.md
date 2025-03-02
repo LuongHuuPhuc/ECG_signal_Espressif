@@ -22,7 +22,7 @@
 |                          |                                          |
 |         LO+/LO-          |      Phát hiện mất kết nối điện cực      |
 |                          |           (HIGH = mất tín hiệu)          |
-|--------------------------|------------------------------------------|
+|                          |                                          |
 |                          |       (Chế độ tiết kiệm năng lượng)      |
 |      SDN (Shutdown)      |         Điều khiển tắt mở cảm biến       |
 |                          |          HIGH = bật, LOW = tắt           |
