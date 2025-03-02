@@ -5,6 +5,15 @@
 # **Giới thiệu sơ lược**
 - Dự án nhỏ sử dụng cảm biến AD8232 để đo tín hiệu điện tâm đồ (ECG) thông qua bộ ADC 12-bit của MCU Esp32
 - Dự án này sẽ tiếp tục được phát triển và tối ưu hơn về code + hiển thị kết quả ra màn hình OLED + sử dụng wifi để gửi thông tin lên Sever
+# **Sơ lược về tín hiệu ECG# ECG Signal Measure
+#### 2025/03/03 
+#### Lương Hữu Phúc
+*** 
+# **Giới thiệu sơ lược**
+- Dự án nhỏ sử dụng cảm biến AD8232 để đo tín hiệu điện tâm đồ (ECG) thông qua bộ ADC 12-bit của MCU Esp32
+- Dự án này sẽ tiếp tục được phát triển và tối ưu hơn về code + hiển thị kết quả ra màn hình OLED + sử dụng wifi để gửi thông tin lên Sever
+# **Sơ lược về tín hiệu ECG(Electrocardiography) - Điện tâm đồ
+- Theo Wikipedia ![1](https://en.wikipedia.org/wiki/Electrocardiography), điện tâm đồ là 
 ## **Chi tiết phần cứng - phần mềm sử dụng**
 ## 1. Hardware
 * ## **01 Esp32 - 38 pins, 4MB flash memory, 520KB SRAM, sử dụng nguồn cấp bằng cáp micro-USB** <br>
@@ -71,5 +80,15 @@
   - Có thể hiển thị được Plain Text, Chart,...
 ![image](https://github.com/user-attachments/assets/ac777887-2218-4d1d-892d-53ea8cae35e3)
 # **Kết quả thu được (Result)**
+- Kết quả hiện thị số liệu trực quan bằng đồ thị bằng CoolTerm64 và dạng dữ liệu text 
+- Tần số lấy mẫu 100Hz
+- Sử dụng thêm thuật toán bộ lọc thông thấp họ Butterworth (Thuật toán bộ lọc ở repo này của tôi [PCG_signal_measure]())
+* Hình ảnh thu lại trực tiếp từ CoolTerm64
+![image](https://github.com/user-attachments/assets/c8b8f74f-edb6-4e29-8132-d415c2ccfb72)
+* Hình ảnh được vẽ lại bằng Python
+![image](https://github.com/user-attachments/assets/02cd2c59-4efe-4380-878b-e3333bfe023d)
+
+# **Đánh giá kết quả thu được 
+
 
 
