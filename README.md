@@ -8,8 +8,9 @@
 <br>
 ## **Chi tiết phần cứng - phần mềm sử dụng**
 ***
-**1. Hardware**
+1. Hardware
 * 01 Esp32 - 38 pins, 4MB flash memory, 520KB SRAM
 <br>
 
 * 01 Module ảm biến AD8232 
+2. Software/Firmware
