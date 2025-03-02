@@ -1,0 +1,43 @@
+menu "ADC Continuous Mode Configuration"
+
+    config ADC_ENABLE_CALIBRATION
+        bool "Enable ADC Calibration"
+        default y
+        help
+            Bật hiệu chuẩn ADC để tăng độ chính xác.
+
+    config ADC_ENABLE_DMA
+        bool "Enable ADC DMA Mode"
+        default y
+        help
+            Cho phép ESP32 sử dụng DMA để thu dữ liệu ADC liên tục mà không quá tải CPU.
+
+    config ADC_BIT_WIDTH
+        int "ADC Bit Width"
+        range 9 12
+        default 12
+        help
+            Chọn độ rộng bit của ADC (9, 10, 11 hoặc 12-bit).
+
+    config ADC_ATTENUATION
+        int "ADC Attenuation Level (dB)"
+        range 0 11
+        default 0
+        help
+            Chọn độ suy giảm của ADC để điều chỉnh phạm vi điện áp đầu vào (0dB = 0-1.1V).
+
+    config ADC_SAMPLING_RATE
+        int "ADC Sampling Rate (Hz)"
+        range 20000 2000000
+        default 1000
+        help
+            Chọn tần số lấy mẫu của ADC (phù hợp với đo ECG).
+
+    config ADC_DMA_BUFFER_SIZE
+        int "ADC DMA Buffer Size (bytes)"
+        range 1024 8192
+        default 2048
+        help
+            Kích thước buffer DMA để lưu dữ liệu ADC.
+
+endmenu
