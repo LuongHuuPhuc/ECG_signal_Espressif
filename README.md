@@ -95,7 +95,7 @@
 # **Kết quả thu được (Result)**
 - Kết quả hiện thị số liệu trực quan bằng đồ thị bằng CoolTerm64 và dạng dữ liệu text 
 - Tần số lấy mẫu 100Hz
-- Sử dụng thêm thuật toán bộ lọc thông thấp họ Butterworth (Thuật toán bộ lọc ở repo này của tôi [PCG_signal_measure]()) để làm suy giảm biên độ của các tần số > 45Hz để thu được tín hiệu mịn và rõ ràng hơn.
+- Sử dụng thêm thuật toán bộ lọc thông thấp họ Butterworth (Thuật toán bộ lọc ở repo này của tôi [PCG_signal_measure](https://github.com/LuongHuuPhuc/PCG_signal_measure)) để làm suy giảm biên độ của các tần số > 45Hz để thu được tín hiệu mịn và rõ ràng hơn.
 * Hình ảnh thu lại trực tiếp từ CoolTerm64
 ![image](https://github.com/user-attachments/assets/c8b8f74f-edb6-4e29-8132-d415c2ccfb72)
 * Hình ảnh được vẽ lại bằng Python
