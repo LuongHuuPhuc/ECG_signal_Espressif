@@ -11,5 +11,5 @@
 **1. Hardware**
 * 01 Esp32 - 38 pins, 4MB flash memory, 520KB SRAM
 <br>
-[!Esp32 38 pins](https://cdn.shopify.com/s/files/1/0903/0218/5736/files/Node_MCU_ESP32_38Pin_pinout.webp?v=1735563613)
+
 * 01 Module ảm biến AD8232 
