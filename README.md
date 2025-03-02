@@ -12,7 +12,13 @@
 * ## **01 Module cảm biến ECG AD8232** <br> 
 ![image](https://github.com/user-attachments/assets/7e074dd4-e20f-422f-9068-c062b013bce5)
 ### Thông số và pinouts của AD8232 <br>
-
+* Thông số
+   - Nguồn cấp tối ưu: 3.3V
+   - Dòng điện tiêu thụ: 170uA (thấp, tiết kiệm năng lượng)
+   - Điện áp đầu ra: 0.9V - 1.5V, trung bình khoảng 1.2V
+   - Dải tần hoạt động: 0.5Hz - 40Hz
+   - Tích hợp Low Pass Filter (~0.5Hz): Loại bỏ trôi nền
+   - Tích hợp High Pass Filter (~40Hz): Loại bỏ nhiễu tần số cao
 |         Pinouts          |                 Chức năng                |
 ---------------------------|-------------------------------------------
 |       RA(Right Arm)      |          Kết nối điện cực tay phải       |
