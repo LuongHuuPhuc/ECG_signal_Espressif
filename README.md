@@ -37,6 +37,7 @@
 ![image](https://github.com/user-attachments/assets/ba09ff8a-18e9-4bbb-83cc-cea74f1418c5)
 ## Sơ dồ kết nối mạch (Components Diagram)
 ![image](https://github.com/user-attachments/assets/548c5a26-caeb-46bb-8cf6-d17bcdca2573)
+
 |          AD8232          |           Esp32 MCU           | Mạch ổn áp ASM117  |
 ---------------------------|-----------------------------------------------------
 |       RA(Right Arm)      | (Nếu dùng jack thì không cần) |          x         | 
@@ -48,5 +49,6 @@
 |      SDN (Shutdown)      |  GND hoặc bỏ không (optional) |          x         |
 |          3.3V            |         Không kết nối         |         3.3V       |
 |          GND             |         Không kết nối         |         GND        |
+
 - Cấp nguồn từ laptop Msi GF63 Thin 11UC cho mạch ổn áp và MCU 
 # 2. Software/Firmware
