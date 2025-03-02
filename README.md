@@ -78,7 +78,7 @@
 |          GND             |         Không kết nối         |         GND        |
 
 - Cấp nguồn từ laptop Msi GF63 Thin 11UC cho mạch ổn áp và MCU
-* ## **Kết nối các điện cực đến cơ thế**
+## **Kết nối các điện cực đến cơ thế**
 ![image](https://github.com/user-attachments/assets/31809a90-f88f-43a9-beec-f5ba67188a67)
 > Kết nối các cực càng gần tim thì tín hiệu thu được càng rõrõ
 ## 2. Software/Firmware
