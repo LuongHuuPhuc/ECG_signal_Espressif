@@ -19,7 +19,7 @@
 |       LA(Left Arm)       |          Kết nối điện cực tay trái       |
 |       RL(Right Leg)      |         Kết nối điện cực chân phải       |
 |         Output           |     Tín hiệu ECG đã được khuếch đại      |
-|--------------------------|------------------------------------------|
+|                          |                                          |
 |         LO+/LO-          |      Phát hiện mất kết nối điện cực      |
 |                          |           (HIGH = mất tín hiệu)          |
 |--------------------------|------------------------------------------|
