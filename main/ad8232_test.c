@@ -14,8 +14,10 @@
 #define ADC_UNIT ADC_UNIT_1
 #define ADC_ATTEN ADC_ATTEN_DB_12 //Tang pham vi do 
 #define ADC_WIDTH ADC_WIDTH_BIT_12
-#define ADC_SAMPLE_RATE 100
-  
+#define ADC_SAMPLE_RATE 100.0f
+#define LO_MINUS_PIN 23
+#define LO_PLUS_PIN 35
+
 static const char *TAG = "ADC";
 TaskHandle_t readADTask_handle = NULL;
 butterworth_filter_t butterworth_filter;
@@ -28,8 +30,8 @@ void adc_configure(){
 
 void read_AD8232(void *pvParameter){
   adc_configure();
-  //Ap dung bo loc low pass butterworth + notch　
-  butterworth_filter_init(&butterworth_filter, 500.0f, 45.0f);
+  //Ap dung bo loc low pass butterworth tan so lay ma 100Hz, tan so cat 45Hz
+  butterworth_filter_init(&butterworth_filter, ADC_SAMPLE_RATE, 45.0f);
   ESP_LOGI(TAG, "Bat dau doc cam bien AD8232");
 
   while(true){
