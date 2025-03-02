@@ -5,13 +5,6 @@
 # **Giới thiệu sơ lược dự án**
 - Dự án nhỏ sử dụng cảm biến AD8232 để đo tín hiệu điện tâm đồ (ECG) thông qua bộ ADC 12-bit của MCU Esp32
 - Dự án này sẽ tiếp tục được phát triển và tối ưu hơn về code + hiển thị kết quả ra màn hình OLED + sử dụng wifi để gửi thông tin lên Sever
-# **Sơ lược về tín hiệu ECG# ECG Signal Measure
-#### 2025/03/03 
-#### Lương Hữu Phúc
-*** 
-# **Giới thiệu sơ lược**
-- Dự án nhỏ sử dụng cảm biến AD8232 để đo tín hiệu điện tâm đồ (ECG) thông qua bộ ADC 12-bit của MCU Esp32
-- Dự án này sẽ tiếp tục được phát triển và tối ưu hơn về code + hiển thị kết quả ra màn hình OLED + sử dụng wifi để gửi thông tin lên Sever
 # **Sơ lược về tín hiệu ECG(Electrocardiography) - Điện tâm đồ**
 - Theo [Wikipedia](https://en.wikipedia.org/wiki/Electrocardiography), điện tâm đồ là tín hiệu điện được ghi lại từ hoạt động điện của tim. Nó thể hiện sự thay đổi điện thế trong tim khi các tế bào co bóp và thư giãn. Tín hiệu ECG có thể được dùng để chẩn đoán các bệnh lý tim mạch như rối loạn nhịp tim, huyết áp cao,...
 ![image](https://github.com/user-attachments/assets/38c37543-2de3-402f-b32c-7d06bfd1d03a)
