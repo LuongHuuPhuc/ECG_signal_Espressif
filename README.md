@@ -39,7 +39,7 @@
 ![image](https://github.com/user-attachments/assets/548c5a26-caeb-46bb-8cf6-d17bcdca2573)
 
 |          AD8232          |           Esp32 MCU           | Mạch ổn áp ASM117  |
----------------------------|-----------------------------------------------------
+---------------------------|-------------------------------|---------------------
 |       RA(Right Arm)      | (Nếu dùng jack thì không cần) |          x         | 
 |       LA(Left Arm)       | (Nếu dùng jack thì không cần) |          x         |
 |       RL(Right Leg)      | (Nếu dùng jack thì không cần) |          x         |
