@@ -12,8 +12,25 @@
 # **Giới thiệu sơ lược**
 - Dự án nhỏ sử dụng cảm biến AD8232 để đo tín hiệu điện tâm đồ (ECG) thông qua bộ ADC 12-bit của MCU Esp32
 - Dự án này sẽ tiếp tục được phát triển và tối ưu hơn về code + hiển thị kết quả ra màn hình OLED + sử dụng wifi để gửi thông tin lên Sever
-# **Sơ lược về tín hiệu ECG(Electrocardiography) - Điện tâm đồ
-- Theo Wikipedia[1](https://en.wikipedia.org/wiki/Electrocardiography), điện tâm đồ là 
+# **Sơ lược về tín hiệu ECG(Electrocardiography) - Điện tâm đồ**
+- Theo [Wikipedia](https://en.wikipedia.org/wiki/Electrocardiography), điện tâm đồ là tín hiệu điện được ghi lại từ hoạt động điện của tim. Nó thể hiện sự thay đổi điện thế trong tim khi các tế bào co bóp và thư giãn. Tín hiệu ECG có thể được dùng để chẩn đoán các bệnh lý tim mạch như rối loạn nhịp tim, huyết áp cao,...
+![image](https://github.com/user-attachments/assets/38c37543-2de3-402f-b32c-7d06bfd1d03a)
+## Quá trình hình thành các đỉnh trong ECG
+1. P-wave (Đỉnh P)
+   * Đại điện cho sự kích thích tâm nhĩ, là quá trình điện thế lan truyền qua các tâm nhĩ, khiễn chúng co lại
+   * P-wave là 1 sóng nhỏ và dương
+2. QRS complex (Phức hợp QSR)
+   * Là quá trình kích thích tâm thất, là khi điện thế lan truyền qua các tâm thất, khiến chúng co lại và bơm máy ra khỏi tim
+   * Phức hợp bao gồm 3 phần chính: Q-wave, R-wave, S-wave:
+     * Q-wave là sóng nhỏ đầu tiên, âm, phản ánh sự kích thích của vách giữa 2 tâm thất.
+     * R-wave: Sóng cao, dương, phản ánh sự kích thích chủ yếu của các tâm thất
+     * S-wave: Sóng âm sau R-wave, phản ánh sự kích thích của vùng dưới đáy tâm thất.
+3. T-wave
+   * Đại diện cho quá trình tái phân cực của tâm thất, khi tâm thất trở về trạng thái điện lý chuẩn bị cho chu kỳ tim tiếp theo
+   * T-wave là sóng dương, có hình dạng dài
+5. U-wave
+   * Là một sóng nhỏ thường xuất hiện sau T-wave, nhưng không phải lúc nào cũng thấy được trên tất cả các ECG. Đỉnh U có thể liên quan đến quá trình tái phân cực của cơ tim hoặc các yếu tố như nồng độ kali trong máu.
+![image](https://github.com/user-attachments/assets/be0cb6b4-8795-422f-94d1-9be2bbb03a11)
 ## **Chi tiết phần cứng - phần mềm sử dụng**
 ## 1. Hardware
 * ## **01 Esp32 - 38 pins, 4MB flash memory, 520KB SRAM, sử dụng nguồn cấp bằng cáp micro-USB** <br>
@@ -67,7 +84,9 @@
 |          3.3V            |         Không kết nối         |         3.3V       |
 |          GND             |         Không kết nối         |         GND        |
 
-- Cấp nguồn từ laptop Msi GF63 Thin 11UC cho mạch ổn áp và MCU 
+- Cấp nguồn từ laptop Msi GF63 Thin 11UC cho mạch ổn áp và MCU
+* ## **Kết nối các điện cực đến cơ thế**
+![image](https://github.com/user-attachments/assets/31809a90-f88f-43a9-beec-f5ba67188a67)
 ## 2. Software/Firmware
 * ## **Visual Studio Code**
 ![image](https://github.com/user-attachments/assets/abdbcfe6-f191-48c9-b9f2-4fa6c3f02d83)
@@ -88,7 +107,6 @@
 * Hình ảnh được vẽ lại bằng Python
 ![image](https://github.com/user-attachments/assets/02cd2c59-4efe-4380-878b-e3333bfe023d)
 
-# **Đánh giá kết quả thu được 
-
+# **Đánh giá kết quả thu được** 
 
 
