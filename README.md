@@ -55,10 +55,10 @@
 
 * ## **01 Dây kết nối điểm cực - đầu ra Jack 3.5m** <br>
 ![image](https://github.com/user-attachments/assets/8e1e8e0a-d897-49c6-962c-8e426ac3abfb)
-* ## **01 Mạch nguồn ổn áp AMS117 (7v-12V input, 3.3V-5V output) <br>
+* ## **01 Mạch nguồn ổn áp AMS117 (7v-12V input, 3.3V-5V output)** <br>
 ![image](https://github.com/user-attachments/assets/4f27250f-4f5f-4308-a1d1-60224184b1d5)
 > Nên cấp nguồn ngoài cho cảm biến vì cảm biến nhiễu với môi trường, nguồn điện trực tiếp từ MCU và laptop, gây méo dạng dữ liệu !
-* ## 01 Cáp nguồn USB to USB có hỗ trợ chống nhiễu Ferrite Bead <br>
+* ## **01 Cáp nguồn USB to USB có hỗ trợ chống nhiễu Ferrite Bead** <br>
  ![image](https://github.com/user-attachments/assets/68fe1ff4-7e74-4732-9820-9a13913619eb)
 * ## **Dây Jumper male-male (đực - đực)**
 ![image](https://github.com/user-attachments/assets/ba09ff8a-18e9-4bbb-83cc-cea74f1418c5)
