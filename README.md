@@ -12,7 +12,6 @@
 * **01 Module cảm biến ECG AD8232** <br>
 ![image](https://github.com/user-attachments/assets/7e074dd4-e20f-422f-9068-c062b013bce5)
 ### Thông số và pinouts của AD8232
------------------------------------------------------------------------
 |         Pinouts          |                 Chức năng                |
 -----------------------------------------------------------------------
 |       RA(Right Arm)      |          Kết nối điện cực tay phải       |
@@ -24,5 +23,5 @@
 |                          |       (Chế độ tiết kiệm năng lượng)      |
 |      SDN (Shutdown)      |         Điều khiển tắt mở cảm biến       |
 |                          |          HIGH = bật, LOW = tắt           |
------------------------------------------------------------------------
+
 2. Software/Firmware
