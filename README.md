@@ -19,6 +19,7 @@
    - Dải tần hoạt động: 0.5Hz - 40Hz
    - Tích hợp Low Pass Filter (~0.5Hz): Loại bỏ trôi nền
    - Tích hợp High Pass Filter (~40Hz): Loại bỏ nhiễu tần số cao
+
 |         Pinouts          |                 Chức năng                |
 ---------------------------|-------------------------------------------
 |       RA(Right Arm)      |          Kết nối điện cực tay phải       |
@@ -32,6 +33,7 @@
 |                          |       (Chế độ tiết kiệm năng lượng)      |
 |      SDN (Shutdown)      |         Điều khiển tắt mở cảm biến       |
 |                          |          HIGH = bật, LOW = tắt           |
+
 * ## **01 Dây kết nối điểm cực - đầu ra Jack 3.5m** <br>
 ![image](https://github.com/user-attachments/assets/8e1e8e0a-d897-49c6-962c-8e426ac3abfb)
 * ## **01 Mạch nguồn ổn áp AMS117 (7v-12V input, 3.3V-5V output) <br>
