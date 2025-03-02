@@ -2,11 +2,11 @@
 #### 2025/03/03 
 #### Lương Hữu Phúc
 *** 
-## **Giới thiệu sơ lược**
+# **Giới thiệu sơ lược**
 - Dự án nhỏ sử dụng cảm biến AD8232 để đo tín hiệu điện tâm đồ (ECG) thông qua bộ ADC 12-bit của MCU Esp32
 - Dự án này sẽ tiếp tục được phát triển và tối ưu hơn về code + hiển thị kết quả ra màn hình OLED + sử dụng wifi để gửi thông tin lên Sever
 ## **Chi tiết phần cứng - phần mềm sử dụng**
-# 1. Hardware
+## 1. Hardware
 * ## **01 Esp32 - 38 pins, 4MB flash memory, 520KB SRAM, sử dụng nguồn cấp bằng cáp micro-USB** <br>
 ![image](https://github.com/user-attachments/assets/07d970ef-ad88-44d2-b055-c6992b4bbfbc)
 * ## **01 Module cảm biến ECG AD8232** <br> 
@@ -59,4 +59,17 @@
 |          GND             |         Không kết nối         |         GND        |
 
 - Cấp nguồn từ laptop Msi GF63 Thin 11UC cho mạch ổn áp và MCU 
-# 2. Software/Firmware
+## 2. Software/Firmware
+* ## **Visual Studio Code**
+![image](https://github.com/user-attachments/assets/abdbcfe6-f191-48c9-b9f2-4fa6c3f02d83)
+* ## **Framework ESP-IDF của Espressif**
+  - Framework hỗ trợ đầy đủ các thư viện để lập trình firmware cho các dòng Esp32, viết bằng ngôn ngữ C, Python
+  - Tích hợp trình CLI (Command Line Interface) để tương tác với người dùng
+![image](https://github.com/user-attachments/assets/cb6e2dec-7bd7-4ebc-b4a4-b83cda8a1141)
+* ## **CoolTerm64**
+  - Phần mềm hỗ trợ hiển thị số liệu bằng UART
+  - Có thể hiển thị được Plain Text, Chart,...
+![image](https://github.com/user-attachments/assets/ac777887-2218-4d1d-892d-53ea8cae35e3)
+# **Kết quả thu được (Result)**
+
+
