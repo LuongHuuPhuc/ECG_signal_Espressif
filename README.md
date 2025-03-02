@@ -8,8 +8,6 @@
 ## **Chi tiết phần cứng - phần mềm sử dụng**
 1. Hardware
 * 01 Esp32 - 38 pins, 4MB flash memory, 520KB SRAM, sử dụng nguồn cấp bằng cáp micro-USB
-<br>
 ![image](https://github.com/user-attachments/assets/07d970ef-ad88-44d2-b055-c6992b4bbfbc)
-
 * 01 Module ảm biến AD8232 
 2. Software/Firmware
