@@ -25,7 +25,8 @@
 #define PWM_RES LEDC_TIMER_13_BIT
 #define PWM_CHANNEL LEDC_CHANNEL_0
 #define PWM_TIMER LEDC_TIMER_0
-#define R_PEAK_THREASHOLD 3500 //Nguong toi thieu de phat hien dinh
+#define R_PEAK_THREASHOLD 3000 //Nguong toi thieu de phat hien dinh
+#define NO_SIGNAL 0
 
 static int prev_val = 0;
 static int current_val = 0;
@@ -77,13 +78,18 @@ void buzzer_for_peak(int status){
     buzzer_on_pwm();
     vTaskDelay(pdMS_TO_TICKS(100));
     buzzer_off_pwm();
+  }else if(status == 2){
+    buzzer_on_pwm(); //Keu lien tuc 
   }
 } 
 
 int detect_peak(int sample){
   current_val = sample;
+  //Neu gia tri lon hon nguong toi thieu va gia tri truoc do be hon nguong toi thieu
   if(current_val > R_PEAK_THREASHOLD && prev_val <= R_PEAK_THREASHOLD){
     peak_detected = 1;
+  }else if(current_val == NO_SIGNAL){ //Neu bien do bang khong (ko co tin hieu)
+    peak_detected = 2;
   }else{
     peak_detected = 0;
   }
@@ -101,8 +107,8 @@ void read_AD8232(void *pvParameter){
   adc_configure();
   ESP_LOGI(TAG, "Bat dau doc cam bien AD8232");
 
+  //Low-pass butterworth de loai bo tan so tren 50Hz
   butterworth_filter_init(&butterworth_filter, 200.0f, 50.0f);
-  
   while(true){
     int sample = (int)(butterworth_filter_apply(&butterworth_filter, (float)(adc1_get_raw(ADC_CHANNEL))));
     printf("%d\n", sample);
