@@ -17,6 +17,6 @@
 /**
  * @brief Ham tu dong cau hinh ADC
  */
-void adc_configure();
+void adc_menuconfig();
 
 #endif //ADC_CONFIG_H_

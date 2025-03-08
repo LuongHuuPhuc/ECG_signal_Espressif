@@ -8,7 +8,7 @@
 
 static const char *TAG = "ADC_CONFIG";
 
-void adc_configure(){
+void adc_menuconfig(){
   ESP_LOGI(TAG, "ADC Calibration: %s", ADC_CALIBRATION_ENABLED ? "Enabled" : "Disabled");
   ESP_LOGI(TAG, "ADC DMA Mode: %s", ADC_DMA_ENABLED ? "Enabled" : "Disabled");
   ESP_LOGI(TAG, "ADC Bit Width: %d-bit", ADC_BIT_WIDTH);

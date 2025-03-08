@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # 📌 1. Đọc dữ liệu ECG từ file CSV
-file_path = "D:/Esp-idf/Mysource/ad8232_ecg_test/data_text/data_ecg_noFilter_2nd.csv"  # Đổi đường dẫn file nếu cần
+file_path = "D:/Esp-idf/Mysource/ad8232_ecg_test/data_text/data_ecg_test_5th.csv"  # Đổi đường dẫn file nếu cần
 df = pd.read_csv(file_path)
 
 # 📌 2. Chuyển đổi dữ liệu ADC sang điện áp (giả sử ADC 12-bit, 3.3V)
