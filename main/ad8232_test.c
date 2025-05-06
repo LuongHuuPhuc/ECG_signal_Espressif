@@ -11,13 +11,13 @@
 #include "freertos/task.h"
 #include "driver/adc.h"
 #include "driver/ledc.h"
-#include "filter.c" //Khai bao ca file source moi duoc =))) /???
+#include "filter.h" //Khai bao ca file source moi duoc =))) /???
 
 #define ADC_CHANNEL ADC_CHANNEL_6 //GPIO34
 #define ADC_UNIT ADC_UNIT_1
 #define ADC_ATTEN ADC_ATTEN_DB_12 //Tang pham vi do 
 #define ADC_WIDTH ADC_WIDTH_BIT_12
-#define ADC_SAMPLE_RATE 100
+#define ADC_SAMPLE_RATE 500
 #define BUZZER_PIN  17
 
 //Buzzer configure
@@ -35,11 +35,11 @@ static int current_val = 0;
  * @return 0 => Khong thay dinh
  */
 static int peak_detected = 0; 
-butterworth_filter_t butterworth_filter;
+btw_lowPass_filter_t butterworth_low_pass_filter;
 static const char *TAG = "ADC";
 TaskHandle_t readADTask_handle = NULL;
 
-void pwm_init(){
+void __attribute__((unused))pwm_init(){
   ledc_timer_config_t ledc_timer = {
     .duty_resolution = PWM_RES,
     .freq_hz = PWM_FREQ,
@@ -73,7 +73,7 @@ void buzzer_off_pwm(){
   ledc_update_duty(LEDC_HIGH_SPEED_MODE, PWM_CHANNEL);
 }
 
-void buzzer_for_peak(int status){
+void __attribute__((unused))buzzer_for_peak(int status){
   if(status == 1){
     buzzer_on_pwm();
     vTaskDelay(pdMS_TO_TICKS(100));
@@ -83,7 +83,7 @@ void buzzer_for_peak(int status){
   }
 } 
 
-int detect_peak(int sample){
+int __attribute__((unused))detect_peak(int sample){
   current_val = sample;
   //Neu gia tri lon hon nguong toi thieu va gia tri truoc do be hon nguong toi thieu
   if(current_val > R_PEAK_THREASHOLD && prev_val <= R_PEAK_THREASHOLD){
@@ -108,16 +108,16 @@ void read_AD8232(void *pvParameter){
   ESP_LOGI(TAG, "Bat dau doc cam bien AD8232");
 
   //Low-pass butterworth de loai bo tan so tren 50Hz
-  butterworth_filter_init(&butterworth_filter, 200.0f, 50.0f);
+  // butterworth_filter_init(&butterworth_low_pass_filter, 200.0f, 50.0f);
   while(true){
-    int sample = (int)(butterworth_filter_apply(&butterworth_filter, (float)(adc1_get_raw(ADC_CHANNEL))));
+    int sample = (adc1_get_raw(ADC_CHANNEL));
     printf("%d\n", sample);
-    buzzer_for_peak(detect_peak(sample));
+    // buzzer_for_peak(detect_peak(sample));
     vTaskDelay(pdMS_TO_TICKS(1000 / ADC_SAMPLE_RATE)); //5ms - Tan so lay mau cua ADC duoc the hien qua ham nay
   }
 }
 
 void app_main(void){
-  pwm_init();
+  // pwm_init();
   xTaskCreatePinnedToCore(read_AD8232, "Read AD8323", 1024 * 4, NULL, 5, &readADTask_handle, 1);
 }
