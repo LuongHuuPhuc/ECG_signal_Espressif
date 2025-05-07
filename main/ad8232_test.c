@@ -1,7 +1,11 @@
 /**
- * @note Cmake ngu loz 
- * \name ECG signal measure
- * \note Chi do raw data, khong can bo loc
+ * @brief ECG su dung vTaskDelay() cua CPU
+ * @note vTaskDelay() van phu thuoc vao FreeRTOS scheduler
+ * @warning Neu in ra qua nhieu (dung printf() trong vong lap nhanh)
+ *    - Chiem toan bo thoi gian CPU va task he thong 
+ *    - Ngan khong cho cac task he thong chay: Task reset Watchdog, Idle Task, FreeRTOS housekeeping
+ * Vi vay, sau mot thoi gian ngan neu WDT phat hien he thong "treo" do khong co task nao nha CPU thi reset ngay lap tuc
+ * Ngoai ra con de bi Jitter (rung lac) tu scheduler
  */
 #include <stdio.h>
 #include <stdint.h>
@@ -17,7 +21,7 @@
 #define ADC_UNIT ADC_UNIT_1
 #define ADC_ATTEN ADC_ATTEN_DB_12 //Tang pham vi do 
 #define ADC_WIDTH ADC_WIDTH_BIT_12
-#define ADC_SAMPLE_RATE 500
+#define ADC_SAMPLE_RATE 100
 #define BUZZER_PIN  17
 
 //Buzzer configure
@@ -113,7 +117,10 @@ void read_AD8232(void *pvParameter){
     int sample = (adc1_get_raw(ADC_CHANNEL));
     printf("%d\n", sample);
     // buzzer_for_peak(detect_peak(sample));
-    vTaskDelay(pdMS_TO_TICKS(1000 / ADC_SAMPLE_RATE)); //5ms - Tan so lay mau cua ADC duoc the hien qua ham nay
+    vTaskDelay(pdMS_TO_TICKS(1000 / ADC_SAMPLE_RATE)); //Tan so lay mau cua ADC duoc the hien qua ham nay
+    /**
+     * @bug De tan so lay mau 100Hz -> delay 10ms thi chay duoc nhung de tu 200Hz tro len thi bi WDT reset ?
+     */
   }
 }
 
