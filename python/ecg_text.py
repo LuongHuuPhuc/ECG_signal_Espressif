@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # 📌 1. Đọc dữ liệu ECG từ file CSV
-file_path = r"D:\Esp-idf\Esp32MCU_jigaku\Esp32_c3mini1_project\ad8232_test\ecg_data\500Hz\test1.csv" # Đổi đường dẫn file nếu cần
+file_path = "D:/Esp-idf/Mysource/ad8232_ecg_test/data_text/data_ecg_noFilter_2nd.csv" # Đổi đường dẫn file nếu cần
 df = pd.read_csv(file_path)
 
 # 📌 2. Chuyển đổi dữ liệu ADC sang điện áp (giả sử ADC 12-bit, 3.3V)
 ADC_MAX = 4095  # ADC 12-bit
 V_REF = 3.3  # Điện áp tham chiếu
-fs = 500  # Sampling rate (Hz) - thay bằng giá trị bạn đã dùng
+fs = 100  # Sampling rate (Hz) - thay bằng giá trị bạn đã dùng
 
 # 📌 3. Chuyển ADC về đơn vị Volt
 ecg_voltage = df * (V_REF / ADC_MAX)
