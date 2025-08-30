@@ -4,6 +4,6 @@ include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 
 set(EXTRA_COMPONENT_DIRS ${CMAKE_CURRENT_LIST_DIR}/components/) 
 
-include_directories("D:/Esp-idf/Mysource/inmp441_test/Filter")
+include_directories("D:/Esp-idf/Test_source/inmp441_test/Filter")
 
 project(ad8232_ecg_test)  
